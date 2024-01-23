@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <script src="script.js" ></script>
+    <title>Komprexní kalkulátoris</title>
+</head>
+<body>
+    <h1 class="nadpis">Komplexní kalkulátoris</h1>
+    <div class="container">
+    <label>Vyberte Operaci: </label>
+
+    <select id="select" onchange="sel()">
+        <option>Vyber akci</option>
+        <option>Faktoriáli</option>
+        <option value="TOOL">Fibonaciho posloupnost</option>
+        <option value="COS">cos</option>
+        <option>sin</option>
+        <option value="LOG">log</option>
+    </select>    
+</div>
+<div id="fibo">
+    <input type="number" id="velikost">
+    <label>Výsledek:</label>
+    <button onclick="TOOL()">výpočet</button>
+</div>
+
+<div id="loga">
+    <input placeholder="zaklad" type="number" id="base">
+    <input placeholder="hodnota" type="number" id="hodnota">
+    <button onclick="logari()">výpočet</button>
+    <label>Výsledek:</label>
+</div>
+<div id="cosi">
+    <input placeholder="uhel" type="angle" id="uhel">
+    <button onclick="cosi()">výpočet</button>
+    <label>Výsledek:</label>
+</div>
+<div id="sini">
+    <input placeholder="uhel" type="angle" id="uhel1">
+    <button onclick="cosi()">výpočet</button>
+    <label>Výsledek:</label>
+</div>
+    <p id="vysl"></p>
+
+
+</body>
+
+</html>

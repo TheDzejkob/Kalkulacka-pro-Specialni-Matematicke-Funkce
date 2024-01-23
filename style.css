@@ -1,0 +1,17 @@
+.nadpis{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+#fibo{
+    display: none;
+}
+#loga{
+    display: none;
+}
+#cosi{
+    display: none;
+}
