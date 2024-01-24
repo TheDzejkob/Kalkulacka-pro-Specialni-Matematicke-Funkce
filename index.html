@@ -7,44 +7,71 @@
     <script src="script.js" ></script>
     <title>Komprexní kalkulátoris</title>
 </head>
-<body>
-    <h1 class="nadpis">Komplexní kalkulátoris</h1>
-    <div class="container">
-    <label>Vyberte Operaci: </label>
+<body class="background">
+    <header>
+        <h1 class="title">Komplexní kalkulátoris</h1>
+    </header>
 
+    <section class="main">
+    <label class="label">Vyberte Operaci: </label>
     <select id="select" onchange="sel()">
-        <option>Vyber akci</option>
-        <option>Faktoriáli</option>
+        <option value="default" >Vyber akci</option>
+        <option value="FAK">Faktoriáli</option>
         <option value="TOOL">Fibonaciho posloupnost</option>
         <option value="COS">cos</option>
-        <option>sin</option>
+        <option value="SIN">sin</option>
         <option value="LOG">log</option>
     </select>    
-</div>
-<div id="fibo">
-    <input type="number" id="velikost">
-    <label>Výsledek:</label>
+
+<div class="container" id="fibo">
+    <div class="container-inner">
+    <input placeholder="počet hodnot" type="number" id="velikost">
     <button onclick="TOOL()">výpočet</button>
+    <label>Výsledek:</label>
+    <p id="vysl-fibo"></p>
+</div>
 </div>
 
-<div id="loga">
+<div class="container" id="loga">
+    <div class="container-inner">
     <input placeholder="zaklad" type="number" id="base">
     <input placeholder="hodnota" type="number" id="hodnota">
     <button onclick="logari()">výpočet</button>
     <label>Výsledek:</label>
+    <p id="vysl-loga"></p>
 </div>
-<div id="cosi">
-    <input placeholder="uhel" type="angle" id="uhel">
-    <button onclick="cosi()">výpočet</button>
-    <label>Výsledek:</label>
 </div>
-<div id="sini">
-    <input placeholder="uhel" type="angle" id="uhel1">
-    <button onclick="cosi()">výpočet</button>
-    <label>Výsledek:</label>
-</div>
-    <p id="vysl"></p>
 
+<div class="container" id="cosi">
+    <div class="container-inner">
+    <input placeholder="uhel" type="degree" id="uhel">
+    <button onclick="cosi()">výpočet</button>
+    <label>Výsledek:</label>
+    <p id="vysl-cosi"></p>
+</div>
+</div>
+
+<div class="container" id="sini">
+    <div class="container-inner">
+    <input placeholder="uhel" type="degree" id="uhel1">
+    <button onclick="sini()">výpočet</button>
+    <label>Výsledek:</label>
+    <p id="vysl-sini"></p>
+</div>
+</div>
+
+</div>
+
+<div class="container" id="faki">
+    <div class="container-inner">
+    <input placeholder="hodnota" type="number" id="hod">
+    <button onclick="faki()">výpočet</button>
+    <label>Výsledek:</label>
+    <p id="vysl-faki"></p>
+</div>
+</div>
+   
+    </section>
 
 </body>
 
